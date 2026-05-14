@@ -25,6 +25,8 @@ kind: Application
 metadata:
   name: ${APP_NAME}-${NAMESPACE}
   namespace: argocd
+  labels:
+    app.kubernetes.io/instance: ${APP_NAME}
 spec:
   project: default
   source:
